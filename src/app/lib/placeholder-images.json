@@ -1,0 +1,29 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Tech-focused abstract background with glowing circuit lines",
+      "imageUrl": "https://picsum.photos/seed/tech-1/1200/800",
+      "imageHint": "technology circuit"
+    },
+    {
+      "id": "project-migration",
+      "description": "Rows of neatly organized laptops for deployment",
+      "imageUrl": "https://picsum.photos/seed/migration/600/400",
+      "imageHint": "laptops deployment"
+    },
+    {
+      "id": "project-server",
+      "description": "Network server rack with glowing blue lights",
+      "imageUrl": "https://picsum.photos/seed/server/600/400",
+      "imageHint": "server rack"
+    },
+    {
+      "id": "project-workspace",
+      "description": "Clean modern workstation with multiple monitors",
+      "imageUrl": "https://picsum.photos/seed/workspace/600/400",
+      "imageHint": "workspace monitor"
+    }
+  ]
+}
