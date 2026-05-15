@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -47,7 +46,12 @@
 }
 
 .glass-panel {
-  @apply bg-card/60 backdrop-blur-md border border-white/5;
+  @apply bg-card/60 backdrop-blur-md border border-white/5 transition-all duration-300;
+}
+
+.glass-panel:hover {
+  @apply bg-card/80 border-white/10 shadow-[0_0_30px_-10px_rgba(191,62,66,0.2)];
+  transform: translateY(-4px);
 }
 
 .asymmetrical-grid {
@@ -60,4 +64,34 @@
   .asymmetrical-grid {
     grid-template-columns: 1fr;
   }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-left {
+  animation: slide-in-left 0.8s ease-out forwards;
+}
+
+.animate-slide-right {
+  animation: slide-in-right 0.8s ease-out forwards;
 }
