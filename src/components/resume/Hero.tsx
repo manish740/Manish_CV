@@ -1,65 +1,84 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Zap, ArrowRight } from "lucide-react";
-import Image from "next/image";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { Terminal, Github, Linkedin, Mail, ArrowDown } from "lucide-react";
 
 export function Hero() {
-  const heroImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
+  const [text, setText] = useState("");
+  const fullText = "Service Desk & Infrastructure Engineer";
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(150);
+
+  useEffect(() => {
+    const handleTyping = () => {
+      setText(prev => isDeleting 
+        ? fullText.substring(0, prev.length - 1)
+        : fullText.substring(0, prev.length + 1)
+      );
+
+      if (!isDeleting && text === fullText) {
+        setTimeout(() => setIsDeleting(true), 2000);
+      } else if (isDeleting && text === "") {
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+      }
+    };
+
+    const timer = setTimeout(handleTyping, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [text, isDeleting, loopNum, typingSpeed]);
 
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
-      <div className="container px-4 mx-auto relative z-10">
-        <div className="max-w-3xl">
-          <div className="flex gap-2 mb-6 animate-fade-in-up">
-            <Badge variant="outline" className="border-accent/50 text-accent font-medium px-4 py-1 hover:bg-accent/10 transition-colors cursor-default">
-              <Zap className="w-3 h-3 mr-1 animate-pulse" /> Available for Hire
-            </Badge>
-            <Badge variant="secondary" className="bg-primary/20 text-primary-foreground">
-              3+ Years Experience
-            </Badge>
-          </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in-up [animation-delay:200ms]">
-            Manish Rohilla <br />
-            <span className="text-accent relative inline-block group">
-              Service Desk
-              <span className="absolute bottom-0 left-0 w-0 h-1 bg-accent transition-all duration-500 group-hover:w-full"></span>
-            </span> Expert.
+    <section className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden pt-20">
+      <div className="container px-6 mx-auto relative z-10 text-center">
+        <div className="animate-fade-in-up">
+          <Badge variant="outline" className="mb-6 px-4 py-1.5 border-primary/20 bg-primary/5 text-primary rounded-full">
+            <Terminal className="w-3.5 h-3.5 mr-2" /> Open for Opportunities
+          </Badge>
+          
+          <h1 className="text-6xl md:text-8xl font-bold mb-8 tracking-tighter">
+            Manish <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Rohilla</span>
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl animate-fade-in-up [animation-delay:400ms]">
-            Technical Professional ensuring seamless IT operations with deep expertise in 
-            SAP, Citrix, MFA, VPN, Office 365, and Active Directory. Improving productivity 
-            through infrastructure management and white-glove support.
+          
+          <div className="h-12 md:h-16 mb-8">
+            <p className="text-2xl md:text-4xl font-headline font-medium text-muted-foreground">
+              I am a <span className="text-foreground typing-cursor">{text}</span>
+            </p>
+          </div>
+          
+          <p className="max-w-2xl mx-auto text-lg text-muted-foreground mb-12 leading-relaxed">
+            Specializing in cloud infrastructure, device management (Intune), and enterprise support. 
+            Transforming complex technical challenges into seamless IT operations.
           </p>
-          <div className="flex flex-wrap gap-4 animate-fade-in-up [animation-delay:600ms]">
-            <a href="#work">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 rounded-full group transition-all duration-300 hover:shadow-[0_0_20px_rgba(67,83,235,0.4)]">
-                View Projects <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+
+          <div className="flex flex-wrap justify-center gap-4 mb-16">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 rounded-full px-10 h-14 text-lg">
+              Download CV
+            </Button>
+            <div className="flex gap-2">
+              <Button variant="outline" size="icon" className="w-14 h-14 rounded-full border-white/10 hover:bg-white/5 transition-all">
+                <Github className="w-6 h-6" />
               </Button>
-            </a>
-            <a href="#contact">
-              <Button size="lg" variant="outline" className="border-accent/20 hover:border-accent/40 hover:bg-accent/5 rounded-full transition-all">
-                Contact Me
+              <Button variant="outline" size="icon" className="w-14 h-14 rounded-full border-white/10 hover:bg-white/5 transition-all">
+                <Linkedin className="w-6 h-6" />
               </Button>
-            </a>
+              <Button variant="outline" size="icon" className="w-14 h-14 rounded-full border-white/10 hover:bg-white/5 transition-all">
+                <Mail className="w-6 h-6" />
+              </Button>
+            </div>
           </div>
         </div>
       </div>
-      
-      <div className="absolute right-0 top-0 h-full w-1/3 pointer-events-none opacity-40 md:opacity-100 hidden md:block animate-slide-right">
-        <div className="relative h-full w-full group">
-          {heroImg && (
-            <Image 
-              src={heroImg.imageUrl} 
-              alt="Tech Background" 
-              fill 
-              className="object-cover rounded-l-[100px] transition-transform duration-700 group-hover:scale-105"
-              data-ai-hint={heroImg.imageHint}
-            />
-          )}
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-transparent" />
-        </div>
-      </div>
+
+      <a href="#about" className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce p-3 text-muted-foreground hover:text-primary transition-colors">
+        <ArrowDown className="w-6 h-6" />
+      </a>
+
+      {/* Background decoration */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px] pointer-events-none opacity-20" />
     </section>
   );
 }

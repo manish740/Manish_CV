@@ -4,26 +4,26 @@
 
 @layer base {
   :root {
-    --background: 225 12% 10%;
+    --background: 222 47% 4%;
     --foreground: 210 20% 98%;
-    --card: 225 12% 12%;
+    --card: 222 47% 6%;
     --card-foreground: 210 20% 98%;
-    --popover: 225 12% 10%;
+    --popover: 222 47% 4%;
     --popover-foreground: 210 20% 98%;
-    --primary: 231 62% 54%;
+    --primary: 221 83% 53%;
     --primary-foreground: 210 20% 98%;
-    --secondary: 225 12% 20%;
+    --secondary: 222 47% 11%;
     --secondary-foreground: 210 20% 98%;
-    --muted: 225 12% 15%;
+    --muted: 222 47% 12%;
     --muted-foreground: 215 20% 65%;
-    --accent: 191 62% 66%;
-    --accent-foreground: 225 12% 10%;
+    --accent: 199 89% 60%;
+    --accent-foreground: 222 47% 4%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 20% 98%;
-    --border: 225 12% 18%;
-    --input: 225 12% 18%;
-    --ring: 231 62% 54%;
-    --radius: 0.75rem;
+    --border: 217 19% 27%;
+    --input: 217 19% 27%;
+    --ring: 221 83% 53%;
+    --radius: 1rem;
   }
 }
 
@@ -32,8 +32,10 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-body;
-    background-image: radial-gradient(circle at 50% 0%, hsl(var(--primary) / 0.15), transparent 50%);
+    @apply bg-background text-foreground font-body antialiased;
+    background-image: 
+      radial-gradient(circle at 20% 20%, hsl(var(--primary) / 0.05), transparent 40%),
+      radial-gradient(circle at 80% 80%, hsl(var(--accent) / 0.05), transparent 40%);
     background-attachment: fixed;
   }
   h1, h2, h3, h4, h5, h6 {
@@ -41,57 +43,38 @@
   }
 }
 
-.tech-glow {
-  box-shadow: 0 0 15px -3px hsl(var(--accent) / 0.3);
+.glass {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl;
 }
 
-.glass-panel {
-  @apply bg-card/60 backdrop-blur-md border border-white/5 transition-all duration-300;
+.glass-card {
+  @apply glass hover:bg-white/10 transition-all duration-500 hover:-translate-y-2;
 }
 
-.glass-panel:hover {
-  @apply bg-card/80 border-white/10 shadow-[0_0_30px_-10px_rgba(191,62,66,0.2)];
-  transform: translateY(-4px);
+.text-glow {
+  text-shadow: 0 0 20px hsl(var(--primary) / 0.5);
 }
 
-.asymmetrical-grid {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 2rem;
+.typing-cursor::after {
+  content: '|';
+  animation: blink 1s step-end infinite;
 }
 
-@media (max-width: 768px) {
-  .asymmetrical-grid {
-    grid-template-columns: 1fr;
-  }
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
 }
 
-@keyframes slide-in-left {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
 }
 
-@keyframes slide-in-right {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.animate-float {
+  animation: float 4s ease-in-out infinite;
 }
 
-.animate-slide-left {
-  animation: slide-in-left 0.8s ease-out forwards;
-}
-
-.animate-slide-right {
-  animation: slide-in-right 0.8s ease-out forwards;
+.scroll-progress {
+  @apply fixed top-0 left-0 h-1 bg-primary z-[100] transition-all duration-150;
 }
