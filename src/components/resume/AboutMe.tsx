@@ -11,9 +11,7 @@ export function AboutMe() {
             <div className="relative glass p-10 rounded-2xl">
               <h2 className="text-4xl font-bold mb-8">Professional <span className="text-primary">Summary</span></h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                With over 3.5 years of technical expertise, I've evolved from hardware troubleshooting to architecting 
-                enterprise-level device management solutions. My journey is defined by a commitment to technical 
-                excellence and a "user-first" approach to problem-solving.
+                Experienced System Engineer with over 3.5 years in systems administration, infrastructure maintenance, and technical support. Currently a System Engineer at Lixil India, with a proven track record of optimizing IT environments. Expertise includes comprehensive management of Windows OS, Office 365, VPN, Citrix Workspace, and Active Directory.
               </p>
               <div className="grid sm:grid-cols-2 gap-6">
                 <div className="flex gap-4">
@@ -31,7 +29,7 @@ export function AboutMe() {
                   </div>
                   <div>
                     <h4 className="font-bold">Security</h4>
-                    <p className="text-sm text-muted-foreground">Certified in modern MFA & EDR protocols.</p>
+                    <p className="text-sm text-muted-foreground">Expert in MFA rollouts & EDR protocols.</p>
                   </div>
                 </div>
               </div>
@@ -44,7 +42,7 @@ export function AboutMe() {
                 <User className="text-primary w-6 h-6" /> Core Strengths
               </h3>
               <div className="flex flex-wrap gap-2">
-                {["Enterprise IT Ops", "Infrastructure Design", "Vulnerability Mgmt", "End-user Experience", "Global Compliance", "Stakeholder Mgmt"].map(tag => (
+                {["System Administration", "Infrastructure Maintenance", "MFA Security Rollout", "SAP Support", "Citrix Workspace", "Active Directory"].map(tag => (
                   <Badge key={tag} variant="secondary" className="rounded-full px-4 py-1.5 bg-white/5 border border-white/10 hover:border-primary/50 transition-colors">
                     {tag}
                   </Badge>
@@ -54,7 +52,7 @@ export function AboutMe() {
             
             <div className="glass p-8 rounded-2xl border-l-4 border-l-primary">
               <p className="italic text-lg text-foreground/90 leading-relaxed">
-                "Recognized as a best performer for exceptional dedication and contributions that significantly advanced critical infrastructure projects at Maruti Suzuki."
+                "Successfully implemented critical security enhancements and provided proficient SAP support, ensuring robust and efficient system operations."
               </p>
             </div>
           </div>

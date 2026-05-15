@@ -11,7 +11,7 @@ import { Card as ShadCard, CardContent as ShadContent, CardHeader as ShadHeader,
 export function AiTailor() {
   const [jobDescription, setJobDescription] = useState("");
   const [originalStatement] = useState(
-    "IT Professional with over 3.5 years of experience in technical support, systems administration, and infrastructure maintenance. Currently a System Engineer at Lixil India (Feb 2026 - Present), with a robust background including roles as a Junior Officer at Toyotsu Ambika (Feb 2025 - Feb 2026) and Junior Engineer at Williams Consulting (Client: Maruti Suzuki, Aug 2022 - Feb 2025). Expert in Windows OS, Office 365, VPN, Citrix Workspace, SAP support, Active Directory, and MFA security rollout."
+    "Experienced System Engineer with over 3.5 years in systems administration, infrastructure maintenance, and technical support. Currently a System Engineer at Lixil India, with a proven track record of optimizing IT environments. Expertise includes comprehensive management of Windows OS, Office 365, VPN, Citrix Workspace, and Active Directory. Successfully implemented critical security enhancements, including MFA rollouts, and provided proficient SAP support, ensuring robust and efficient system operations."
   );
   const [refinedStatement, setRefinedStatement] = useState("");
   const [isLoading, setIsLoading] = useState(false);
