@@ -8,6 +8,12 @@
       "imageHint": "technology circuit"
     },
     {
+      "id": "profile-photo",
+      "description": "Professional headshot of a system engineer",
+      "imageUrl": "https://picsum.photos/seed/man-tech/400/400",
+      "imageHint": "professional man"
+    },
+    {
       "id": "project-migration",
       "description": "Rows of neatly organized laptops for deployment",
       "imageUrl": "https://picsum.photos/seed/migration/600/400",

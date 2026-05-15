@@ -1,13 +1,18 @@
+
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Terminal, Github, Linkedin, Mail, ArrowDown, Download } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowDown, Download } from "lucide-react";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export function Hero() {
   const [text, setText] = useState("");
   const fullText = "System Engineer";
   const [typingSpeed] = useState(100);
+
+  const profileImg = PlaceHolderImages.find(img => img.id === "profile-photo");
 
   useEffect(() => {
     if (text.length < fullText.length) {
@@ -21,7 +26,24 @@ export function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden pt-20">
       <div className="container px-6 mx-auto relative z-10 text-center">
-        <div className="animate-fade-in-up">
+        <div className="animate-fade-in-up flex flex-col items-center">
+          
+          {/* Profile Photo Area */}
+          <div className="relative mb-10 group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-full blur opacity-40 group-hover:opacity-75 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
+            <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-background overflow-hidden glass shadow-2xl animate-float">
+              {profileImg && (
+                <Image
+                  src={profileImg.imageUrl}
+                  alt="Manish Rohilla Profile"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  data-ai-hint={profileImg.imageHint}
+                />
+              )}
+            </div>
+          </div>
+
           <h1 className="text-6xl md:text-8xl font-bold mb-8 tracking-tighter relative inline-block">
             Manish <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Rohilla</span>
             <span className="absolute -bottom-2 left-0 w-full h-1.5 bg-gradient-to-r from-primary/50 to-transparent rounded-full blur-sm" />
