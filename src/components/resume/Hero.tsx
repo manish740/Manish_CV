@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Terminal, Github, Linkedin, Mail, ArrowDown, Download } from "lucide-react";
 
 export function Hero() {
@@ -23,10 +22,6 @@ export function Hero() {
     <section className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden pt-20">
       <div className="container px-6 mx-auto relative z-10 text-center">
         <div className="animate-fade-in-up">
-          <Badge variant="outline" className="mb-6 px-4 py-1.5 border-primary/20 bg-primary/5 text-primary rounded-full">
-            <Terminal className="w-3.5 h-3.5 mr-2" /> Open for Opportunities
-          </Badge>
-          
           <h1 className="text-6xl md:text-8xl font-bold mb-8 tracking-tighter relative inline-block">
             Manish <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Rohilla</span>
             <span className="absolute -bottom-2 left-0 w-full h-1.5 bg-gradient-to-r from-primary/50 to-transparent rounded-full blur-sm" />
