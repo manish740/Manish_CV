@@ -10,7 +10,7 @@ const skills = [
     icon: <ShieldCheck className="w-5 h-5" />,
     items: [
       { name: "MFA Setup & Support", level: 95 },
-      { name: "VPN Connectivity", level: 92 },
+      { name: "VPN & Citrix Workspace", level: 92 },
       { name: "Office 365 Admin", level: 90 },
       { name: "Active Directory", level: 88 },
     ]
@@ -19,9 +19,9 @@ const skills = [
     category: "Technical Ops",
     icon: <Cpu className="w-5 h-5" />,
     items: [
+      { name: "SAP Support", level: 85 },
       { name: "Hardware Troubleshooting", level: 95 },
       { name: "Software Installation", level: 94 },
-      { name: "Network Diag", level: 85 },
       { name: "System Optimization", level: 90 },
     ]
   },

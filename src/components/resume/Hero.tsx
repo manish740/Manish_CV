@@ -28,8 +28,8 @@ export function Hero() {
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl animate-fade-in-up [animation-delay:400ms]">
             Technical Professional ensuring seamless IT operations with deep expertise in 
-            MFA, VPN, Office 365, and Active Directory. Improving productivity through 
-            infrastructure management and white-glove support.
+            SAP, Citrix, MFA, VPN, Office 365, and Active Directory. Improving productivity 
+            through infrastructure management and white-glove support.
           </p>
           <div className="flex flex-wrap gap-4 animate-fade-in-up [animation-delay:600ms]">
             <a href="#work">
