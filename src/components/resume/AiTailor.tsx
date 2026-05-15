@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent, CardHeader, CardTitle } from "lucide-react";
 import { Sparkles, Loader2, Copy, CheckCircle2 } from "lucide-react";
 import { refinePersonalStatement } from "@/ai/flows/ai-professional-tailor";
 import { useToast } from "@/hooks/use-toast";
@@ -12,7 +11,7 @@ import { Card as ShadCard, CardContent as ShadContent, CardHeader as ShadHeader,
 export function AiTailor() {
   const [jobDescription, setJobDescription] = useState("");
   const [originalStatement] = useState(
-    "Service Desk Engineer with 2 years of experience in enterprise IT support, hardware troubleshooting, and fleet management. Expert in VPN, Office 365, and Active Directory environments."
+    "IT Professional with 3 years of experience in technical support and systems administration. Currently a Junior Officer at Toyotsu Ambika, specializing in Windows OS, Office 365, VPN, and Active Directory. Expert in resolving hardware/software issues and ensuring IT policy compliance."
   );
   const [refinedStatement, setRefinedStatement] = useState("");
   const [isLoading, setIsLoading] = useState(false);

@@ -2,27 +2,39 @@ import { Badge } from "@/components/ui/badge";
 
 const experience = [
   {
+    title: "Junior Officer",
+    company: "Toyotsu Ambika Automotive Safety Components India Pvt. Ltd.",
+    period: "Feb 2025 - Present",
+    description: "Delivering first-line technical support for hardware, software, and network infrastructure while ensuring IT policy compliance.",
+    highlights: [
+      "Troubleshoot Windows OS & M365 issues",
+      "Managed remote support (TeamViewer/AnyDesk)",
+      "Monitored web activity & IT compliance",
+      "Executed system security updates/patches"
+    ]
+  },
+  {
     title: "Junior Engineer (Client: Maruti Suzuki)",
     company: "Williams Consulting Pvt. Ltd.",
-    period: "2022 - Present",
-    description: "Investigate, troubleshoot and resolve daily issues related to workstations, operating systems and applications. Best performer award recipient.",
+    period: "2022 - Feb 2025",
+    description: "Investigated and resolved daily issues related to workstations and applications. Recognized as the best performer for technical excellence.",
     highlights: [
       "Resolved daily workstation issues",
-      "Managed hardware/software setup",
+      "Managed hardware/software fleet setup",
       "Maintained Active Directory/OUs",
-      "Configured VPN connectivity"
+      "Configured secure VPN connectivity"
     ]
   },
   {
     title: "Junior Engineer (Client: Hughes Systique)",
     company: "Williams Consulting Pvt. Ltd.",
     period: "Feb 2024 - Apr 2024",
-    description: "Focused on desktop configuration and user training for MFA security implementations.",
+    description: "Project-focused role specializing in desktop configuration and user training for MFA security implementations.",
     highlights: [
-      "Supported MFA setup & training",
-      "Diagnosed hardware malfunctions",
+      "Supported MFA rollout & end-user training",
+      "Diagnosed complex hardware malfunctions",
       "Performed system compatibility checks",
-      "Optimized performance levels"
+      "Optimized workstation performance levels"
     ]
   }
 ];
@@ -35,7 +47,7 @@ export function Timeline() {
           <div className="animate-slide-left">
             <h2 className="text-4xl font-bold sticky top-24">Career <br /><span className="text-primary">Trajectory</span></h2>
             <p className="text-muted-foreground mt-4 pr-8">
-              A journey of technical growth and operational excellence in Gurugram's top IT sectors.
+              A journey of technical growth and operational excellence across major automotive and IT sectors.
             </p>
           </div>
           
