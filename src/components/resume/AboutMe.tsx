@@ -22,7 +22,7 @@ export function AboutMe() {
                   </div>
                   <div>
                     <h4 className="font-bold">Growth</h4>
-                    <p className="text-sm text-muted-foreground">Continuous learner in Cloud & DevOps.</p>
+                    <p className="text-sm text-muted-foreground">Continuous learner in advanced IT Ops.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">

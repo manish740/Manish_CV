@@ -2,7 +2,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { Laptop, Cloud, ShieldAlert, Settings2 } from "lucide-react";
+import { Laptop, ShieldAlert, Settings2, ShieldCheck } from "lucide-react";
 
 const skills = [
   {
@@ -16,13 +16,13 @@ const skills = [
     ]
   },
   {
-    category: "Security & Cloud",
+    category: "Security & Infrastructure",
     icon: <ShieldAlert className="w-5 h-5" />,
     items: [
       { name: "EDR Support", level: 80 },
       { name: "MFA & VPN Protocols", level: 96 },
       { name: "Active Directory (AD)", level: 90 },
-      { name: "Cloud Basics (AWS/Azure)", level: 75 },
+      { name: "Compliance Monitoring", level: 85 },
     ]
   },
   {
@@ -53,7 +53,7 @@ export function SkillsMatrix() {
             <Card key={idx} className="glass-card border-none overflow-hidden relative group">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-accent opacity-50" />
               <CardHeader className="pb-4">
-                <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-4">
+                <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-4 transition-transform group-hover:rotate-12">
                   {skillGroup.icon}
                 </div>
                 <CardTitle className="text-2xl">{skillGroup.category}</CardTitle>

@@ -9,7 +9,7 @@ const experience = [
     description: "Leading enterprise-grade IT infrastructure maintenance and digital transformation initiatives.",
     highlights: [
       "Architecting Intune-based device management workflows",
-      "Optimizing global server health and cloud synchronization",
+      "Optimizing global server health and network synchronization",
       "Deploying high-availability network security protocols",
       "Managing $100k+ in IT infrastructure assets"
     ]

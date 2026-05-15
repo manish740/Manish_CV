@@ -50,7 +50,7 @@ export function Hero() {
           </div>
           
           <p className="max-w-2xl mx-auto text-lg text-muted-foreground mb-12 leading-relaxed">
-            Specializing in cloud infrastructure, device management (Intune), and enterprise support. 
+            Specializing in enterprise device management (Intune), network security, and infrastructure support. 
             Transforming complex technical challenges into seamless IT operations.
           </p>
 
