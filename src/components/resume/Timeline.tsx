@@ -26,6 +26,18 @@ const experience = [
     ]
   },
   {
+    title: "System Engineer",
+    company: "Lixil India Pvt. Ltd.",
+    period: "2021 - 2022",
+    description: "Dedicated to maintaining robust IT infrastructure and ensuring high availability for critical business systems.",
+    highlights: [
+      "Managed core IT infrastructure assets",
+      "Monitored server health and performance",
+      "Implemented backup and recovery protocols",
+      "Ensured 99.9% system uptime"
+    ]
+  },
+  {
     title: "Junior Engineer (Client: Hughes Systique)",
     company: "Williams Consulting Pvt. Ltd.",
     period: "Feb 2024 - Apr 2024",
@@ -47,7 +59,7 @@ export function Timeline() {
           <div className="animate-slide-left">
             <h2 className="text-4xl font-bold sticky top-24">Career <br /><span className="text-primary">Trajectory</span></h2>
             <p className="text-muted-foreground mt-4 pr-8">
-              A journey of technical growth and operational excellence across major automotive and IT sectors.
+              A journey of technical growth and operational excellence across major automotive, manufacturing, and IT sectors.
             </p>
           </div>
           

@@ -16,7 +16,7 @@ export function Hero() {
               <Zap className="w-3 h-3 mr-1 animate-pulse" /> Available for Hire
             </Badge>
             <Badge variant="secondary" className="bg-primary/20 text-primary-foreground">
-              2 Years Experience
+              3+ Years Experience
             </Badge>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in-up [animation-delay:200ms]">
@@ -27,9 +27,9 @@ export function Hero() {
             </span> Expert.
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl animate-fade-in-up [animation-delay:400ms]">
-            Junior Engineer ensuring seamless IT operations with deep expertise in 
+            Technical Professional ensuring seamless IT operations with deep expertise in 
             MFA, VPN, Office 365, and Active Directory. Improving productivity through 
-            technical excellence and white-glove support.
+            infrastructure management and white-glove support.
           </p>
           <div className="flex flex-wrap gap-4 animate-fade-in-up [animation-delay:600ms]">
             <a href="#work">

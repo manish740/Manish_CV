@@ -11,7 +11,7 @@ import { Card as ShadCard, CardContent as ShadContent, CardHeader as ShadHeader,
 export function AiTailor() {
   const [jobDescription, setJobDescription] = useState("");
   const [originalStatement] = useState(
-    "IT Professional with 3 years of experience in technical support and systems administration. Currently a Junior Officer at Toyotsu Ambika, specializing in Windows OS, Office 365, VPN, and Active Directory. Expert in resolving hardware/software issues and ensuring IT policy compliance."
+    "IT Professional with over 3 years of experience in technical support, systems administration, and infrastructure maintenance. Currently a Junior Officer at Toyotsu Ambika, with prior experience as a System Engineer at Lixil India and Junior Engineer at Williams Consulting. Expert in Windows OS, Office 365, VPN, Active Directory, and infrastructure management."
   );
   const [refinedStatement, setRefinedStatement] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -61,7 +61,7 @@ export function AiTailor() {
               AI Role <span className="text-accent">Tailor</span> <Sparkles className="w-8 h-8 text-accent" />
             </h2>
             <p className="text-muted-foreground">
-              Tailor my profile to a specific job description. AI will highlight relevant IT support skills for the role.
+              Tailor my profile to a specific job description. AI will highlight relevant IT support and infrastructure skills for the role.
             </p>
           </div>
 
