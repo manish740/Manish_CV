@@ -2,51 +2,51 @@ import { Badge } from "@/components/ui/badge";
 
 const experience = [
   {
+    title: "System Engineer",
+    company: "Lixil India Pvt. Ltd.",
+    period: "Feb 2025 - Present",
+    description: "Currently leading IT infrastructure maintenance and system reliability projects to ensure high availability for critical business systems.",
+    highlights: [
+      "Managing core IT infrastructure assets and network health",
+      "Implementing advanced backup and disaster recovery protocols",
+      "Optimizing server performance and cloud service integration",
+      "Ensuring 99.9% uptime for enterprise applications"
+    ]
+  },
+  {
     title: "Junior Officer",
     company: "Toyotsu Ambika Automotive Safety Components India Pvt. Ltd.",
-    period: "Feb 2025 - Present",
-    description: "Delivering first-line technical support for hardware, software, and network infrastructure while ensuring IT policy compliance.",
+    period: "Jan 2025 - Feb 2025",
+    description: "Provided technical support and ensured IT policy compliance during a focused tenure specializing in system security and remote troubleshooting.",
     highlights: [
-      "Troubleshoot Windows OS & M365 issues",
-      "Managed remote support (TeamViewer/AnyDesk)",
-      "Monitored web activity & IT compliance",
-      "Executed system security updates/patches"
+      "Troubleshot Windows OS & M365 environment issues",
+      "Managed remote support using TeamViewer and AnyDesk",
+      "Monitored web activity and enforced IT compliance policies",
+      "Executed critical system security updates and patches"
     ]
   },
   {
     title: "Junior Engineer (Client: Maruti Suzuki)",
     company: "Williams Consulting Pvt. Ltd.",
-    period: "2022 - Feb 2025",
-    description: "Investigated and resolved daily issues related to workstations and applications. Recognized as the best performer for technical excellence.",
+    period: "2022 - Jan 2025",
+    description: "Resolved daily technical issues for workstations and applications at Maruti Suzuki. Recognized as a top performer for technical excellence.",
     highlights: [
-      "Resolved daily workstation issues",
-      "Managed hardware/software fleet setup",
-      "Maintained Active Directory/OUs",
-      "Configured secure VPN connectivity"
-    ]
-  },
-  {
-    title: "System Engineer",
-    company: "Lixil India Pvt. Ltd.",
-    period: "2021 - 2022",
-    description: "Dedicated to maintaining robust IT infrastructure and ensuring high availability for critical business systems.",
-    highlights: [
-      "Managed core IT infrastructure assets",
-      "Monitored server health and performance",
-      "Implemented backup and recovery protocols",
-      "Ensured 99.9% system uptime"
+      "Managed hardware/software fleet for 100+ workstations",
+      "Maintained Active Directory OUs and Group Policies",
+      "Configured and troubleshot secure VPN connectivity",
+      "Investigated complex OS and application malfunctions"
     ]
   },
   {
     title: "Junior Engineer (Client: Hughes Systique)",
     company: "Williams Consulting Pvt. Ltd.",
     period: "Feb 2024 - Apr 2024",
-    description: "Project-focused role specializing in desktop configuration and user training for MFA security implementations.",
+    description: "Specialized project role focusing on security implementation and user training during a high-stakes infrastructure rollout.",
     highlights: [
-      "Supported MFA rollout & end-user training",
-      "Diagnosed complex hardware malfunctions",
-      "Performed system compatibility checks",
-      "Optimized workstation performance levels"
+      "Supported MFA rollout and provided end-user training",
+      "Diagnosed and repaired complex hardware malfunctions",
+      "Performed system compatibility checks for new software",
+      "Optimized workstation performance across the department"
     ]
   }
 ];

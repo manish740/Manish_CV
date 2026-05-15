@@ -11,7 +11,7 @@ import { Card as ShadCard, CardContent as ShadContent, CardHeader as ShadHeader,
 export function AiTailor() {
   const [jobDescription, setJobDescription] = useState("");
   const [originalStatement] = useState(
-    "IT Professional with over 3 years of experience in technical support, systems administration, and infrastructure maintenance. Currently a Junior Officer at Toyotsu Ambika, with prior experience as a System Engineer at Lixil India and Junior Engineer at Williams Consulting. Expert in Windows OS, Office 365, VPN, Active Directory, and infrastructure management."
+    "IT Professional with over 3 years of experience in technical support, systems administration, and infrastructure maintenance. Currently a System Engineer at Lixil India, with a strong background in Service Desk operations at Toyotsu Ambika and Junior Engineering at Williams Consulting (Client: Maruti Suzuki). Expert in Windows OS, Office 365, VPN, Active Directory, and MFA security rollout."
   );
   const [refinedStatement, setRefinedStatement] = useState("");
   const [isLoading, setIsLoading] = useState(false);
