@@ -36,18 +36,6 @@ const experience = [
       "Configured and troubleshot secure VPN connectivity",
       "Investigated complex OS and application malfunctions"
     ]
-  },
-  {
-    title: "Junior Engineer (Client: Hughes Systique)",
-    company: "Williams Consulting Pvt. Ltd.",
-    period: "Feb 2024 - Apr 2024",
-    description: "Specialized project role focusing on security implementation and user training during a high-stakes infrastructure rollout.",
-    highlights: [
-      "Supported MFA rollout and provided end-user training",
-      "Diagnosed and repaired complex hardware malfunctions",
-      "Performed system compatibility checks for new software",
-      "Optimized workstation performance across the department"
-    ]
   }
 ];
 
