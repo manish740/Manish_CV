@@ -3,11 +3,11 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Terminal, Github, Linkedin, Mail, ArrowDown } from "lucide-react";
+import { Terminal, Github, Linkedin, Mail, ArrowDown, Download } from "lucide-react";
 
 export function Hero() {
   const [text, setText] = useState("");
-  const fullText = "Service Desk & Infrastructure Engineer";
+  const fullText = "System Engineer";
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
@@ -39,35 +39,42 @@ export function Hero() {
             <Terminal className="w-3.5 h-3.5 mr-2" /> Open for Opportunities
           </Badge>
           
-          <h1 className="text-6xl md:text-8xl font-bold mb-8 tracking-tighter">
+          <h1 className="text-6xl md:text-8xl font-bold mb-8 tracking-tighter relative inline-block">
             Manish <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Rohilla</span>
+            <span className="absolute -bottom-2 left-0 w-full h-1.5 bg-gradient-to-r from-primary/50 to-transparent rounded-full blur-sm" />
           </h1>
           
           <div className="h-12 md:h-16 mb-8">
             <p className="text-2xl md:text-4xl font-headline font-medium text-muted-foreground">
-              I am a <span className="text-foreground typing-cursor">{text}</span>
+              I am a <span className="text-foreground typing-cursor text-glow">{text}</span>
             </p>
           </div>
           
           <p className="max-w-2xl mx-auto text-lg text-muted-foreground mb-12 leading-relaxed">
-            Specializing in enterprise device management (Intune), network security, and infrastructure support. 
-            Transforming complex technical challenges into seamless IT operations.
+            Specializing in enterprise IT infrastructure, device management (Intune), and complex system optimization. 
+            Transforming technical challenges into high-performance IT environments.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-4 mb-16">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 rounded-full px-10 h-14 text-lg">
-              Download CV
+          <div className="flex flex-wrap justify-center gap-6 mb-16">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 rounded-full px-10 h-14 text-lg shadow-lg hover:shadow-primary/20 transition-all hover:-translate-y-1 active:translate-y-0">
+              <Download className="w-5 h-5 mr-2" /> Download CV
             </Button>
-            <div className="flex gap-2">
-              <Button variant="outline" size="icon" className="w-14 h-14 rounded-full border-white/10 hover:bg-white/5 transition-all">
-                <Github className="w-6 h-6" />
-              </Button>
-              <Button variant="outline" size="icon" className="w-14 h-14 rounded-full border-white/10 hover:bg-white/5 transition-all">
-                <Linkedin className="w-6 h-6" />
-              </Button>
-              <Button variant="outline" size="icon" className="w-14 h-14 rounded-full border-white/10 hover:bg-white/5 transition-all">
-                <Mail className="w-6 h-6" />
-              </Button>
+            <div className="flex gap-3">
+              {[
+                { icon: <Github className="w-6 h-6" />, label: "GitHub" },
+                { icon: <Linkedin className="w-6 h-6" />, label: "LinkedIn" },
+                { icon: <Mail className="w-6 h-6" />, label: "Mail" }
+              ].map((social, i) => (
+                <Button 
+                  key={i}
+                  variant="outline" 
+                  size="icon" 
+                  className="w-14 h-14 rounded-full border-white/10 hover:bg-white/5 hover:border-primary/50 transition-all hover:-translate-y-1 active:translate-y-0"
+                >
+                  {social.icon}
+                  <span className="sr-only">{social.label}</span>
+                </Button>
+              ))}
             </div>
           </div>
         </div>

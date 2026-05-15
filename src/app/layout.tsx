@@ -2,8 +2,8 @@ import type {Metadata} from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Manish Rohilla | Service Desk & Junior Engineer Portfolio',
-  description: 'A technical showcase for Manish Rohilla, a Service Desk Engineer with 2 years of experience in IT operations, VPN, and Office 365.',
+  title: 'Manish Rohilla | System Engineer Portfolio',
+  description: 'A technical showcase for Manish Rohilla, a System Engineer with 3.5+ years of experience in IT operations, infrastructure maintenance, and system optimization.',
 };
 
 export default function RootLayout({

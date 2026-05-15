@@ -47,7 +47,7 @@ const refinePersonalStatementPrompt = ai.definePrompt({
   name: 'refinePersonalStatementPrompt',
   input: {schema: RefinePersonalStatementInputSchema},
   output: {schema: RefinePersonalStatementOutputSchema},
-  prompt: `You are an AI professional tailor specialized in refining personal statements for desktop support engineers.
+  prompt: `You are an AI professional tailor specialized in refining personal statements for System Engineers.
 Your goal is to enhance the provided personal statement to specifically highlight skills and experiences that are most relevant to the given job description.
 Ensure the refined statement is concise, impactful, and directly addresses the requirements and preferences outlined in the job description.
 
