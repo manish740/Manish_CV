@@ -4,7 +4,7 @@ const experience = [
   {
     title: "System Engineer",
     company: "Lixil India Pvt. Ltd.",
-    period: "Feb 2025 - Present",
+    period: "Feb 2026 - Present",
     description: "Currently leading IT infrastructure maintenance and system reliability projects to ensure high availability for critical business systems.",
     highlights: [
       "Managing core IT infrastructure assets and network health",
@@ -16,7 +16,7 @@ const experience = [
   {
     title: "Junior Officer",
     company: "Toyotsu Ambika Automotive Safety Components India Pvt. Ltd.",
-    period: "Jan 2025 - Feb 2025",
+    period: "Feb 2025 - Feb 2026",
     description: "Provided technical support and ensured IT policy compliance during a focused tenure specializing in system security and remote troubleshooting.",
     highlights: [
       "Troubleshot Windows OS & M365 environment issues",
@@ -28,7 +28,7 @@ const experience = [
   {
     title: "Junior Engineer (Client: Maruti Suzuki)",
     company: "Williams Consulting Pvt. Ltd.",
-    period: "2022 - Jan 2025",
+    period: "Aug 2022 - Feb 2025",
     description: "Resolved daily technical issues for workstations and applications at Maruti Suzuki. Recognized as a top performer for technical excellence.",
     highlights: [
       "Managed hardware/software fleet for 100+ workstations",
