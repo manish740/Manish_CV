@@ -1,39 +1,38 @@
-
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { Laptop, Server, Terminal, Shield, Cpu, Globe } from "lucide-react";
+import { Laptop, ShieldCheck, Globe, Cpu, Users, Settings } from "lucide-react";
 
 const skills = [
   {
-    category: "Hardware",
-    icon: <Cpu className="w-5 h-5" />,
+    category: "Security & Infrastructure",
+    icon: <ShieldCheck className="w-5 h-5" />,
     items: [
-      { name: "Fleet Deployment", level: 95 },
-      { name: "Peripheral Diag", level: 90 },
-      { name: "Component Replacement", level: 85 },
-      { name: "Asset Management", level: 92 },
-    ]
-  },
-  {
-    category: "OS & Software",
-    icon: <Laptop className="w-5 h-5" />,
-    items: [
-      { name: "Windows 10/11", level: 98 },
-      { name: "macOS Sonoma", level: 85 },
-      { name: "O365 Admin", level: 90 },
+      { name: "MFA Setup & Support", level: 95 },
+      { name: "VPN Connectivity", level: 92 },
+      { name: "Office 365 Admin", level: 90 },
       { name: "Active Directory", level: 88 },
     ]
   },
   {
-    category: "Networking",
-    icon: <Globe className="w-5 h-5" />,
+    category: "Technical Ops",
+    icon: <Cpu className="w-5 h-5" />,
     items: [
-      { name: "TCP/IP & DNS", level: 80 },
-      { name: "VPN/SD-WAN", level: 75 },
-      { name: "Wireless Config", level: 88 },
-      { name: "Patch Panel Mgmt", level: 82 },
+      { name: "Hardware Troubleshooting", level: 95 },
+      { name: "Software Installation", level: 94 },
+      { name: "Network Diag", level: 85 },
+      { name: "System Optimization", level: 90 },
+    ]
+  },
+  {
+    category: "Soft Skills",
+    icon: <Users className="w-5 h-5" />,
+    items: [
+      { name: "Customer Service", level: 98 },
+      { name: "Project Management", level: 85 },
+      { name: "Team Player", level: 95 },
+      { name: "End-User Training", level: 92 },
     ]
   }
 ];
@@ -45,7 +44,7 @@ export function SkillsMatrix() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">Technical Matrix</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Categorized proficiency levels across core IT support domains.
+            Categorized proficiency levels across core IT support and infrastructure domains.
           </p>
         </div>
 

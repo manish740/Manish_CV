@@ -1,7 +1,6 @@
-
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Laptop, ShieldCheck, Zap } from "lucide-react";
+import { Zap } from "lucide-react";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
@@ -17,24 +16,29 @@ export function Hero() {
               <Zap className="w-3 h-3 mr-1" /> Available for Hire
             </Badge>
             <Badge variant="secondary" className="bg-primary/20 text-primary-foreground">
-              3 Years Experience
+              2 Years Experience
             </Badge>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in-up [animation-delay:200ms]">
-            Technical precision <br />
-            <span className="text-accent">empowering</span> enterprise scale.
+            Manish Rohilla <br />
+            <span className="text-accent">Service Desk</span> Expert.
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl animate-fade-in-up [animation-delay:400ms]">
-            Desktop Support Engineer specializing in fleet deployments, hardware optimization, 
-            and white-glove executive support. Delivering stability to technical ecosystems.
+            Junior Engineer ensuring seamless IT operations with deep expertise in 
+            MFA, VPN, Office 365, and Active Directory. Improving productivity through 
+            technical excellence and white-glove support.
           </p>
           <div className="flex flex-wrap gap-4 animate-fade-in-up [animation-delay:600ms]">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 rounded-full">
-              View Work
-            </Button>
-            <Button size="lg" variant="outline" className="border-accent/20 hover:bg-accent/10 rounded-full">
-              Download Resume
-            </Button>
+            <a href="#work">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 rounded-full">
+                View Projects
+              </Button>
+            </a>
+            <a href="#contact">
+              <Button size="lg" variant="outline" className="border-accent/20 hover:bg-accent/10 rounded-full">
+                Contact Me
+              </Button>
+            </a>
           </div>
         </div>
       </div>

@@ -1,18 +1,18 @@
-
 "use client";
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "lucide-react";
 import { Sparkles, Loader2, Copy, CheckCircle2 } from "lucide-react";
 import { refinePersonalStatement } from "@/ai/flows/ai-professional-tailor";
 import { useToast } from "@/hooks/use-toast";
+import { Card as ShadCard, CardContent as ShadContent, CardHeader as ShadHeader, CardTitle as ShadTitle } from "@/components/ui/card";
 
 export function AiTailor() {
   const [jobDescription, setJobDescription] = useState("");
-  const [originalStatement, setOriginalStatement] = useState(
-    "Dedicated Desktop Support Engineer with 3 years of experience in enterprise IT support, troubleshooting, and fleet management. Expert in Windows and macOS environments."
+  const [originalStatement] = useState(
+    "Service Desk Engineer with 2 years of experience in enterprise IT support, hardware troubleshooting, and fleet management. Expert in VPN, Office 365, and Active Directory environments."
   );
   const [refinedStatement, setRefinedStatement] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -59,19 +59,19 @@ export function AiTailor() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 flex items-center justify-center gap-3">
-              AI Professional <span className="text-accent">Tailor</span> <Sparkles className="w-8 h-8 text-accent" />
+              AI Role <span className="text-accent">Tailor</span> <Sparkles className="w-8 h-8 text-accent" />
             </h2>
             <p className="text-muted-foreground">
-              Paste a job description and let AI highlight your most relevant desktop support skills.
+              Tailor my profile to a specific job description. AI will highlight relevant IT support skills for the role.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground/70">Job Description</label>
+                <label className="text-sm font-medium text-foreground/70">Target Job Description</label>
                 <Textarea 
-                  placeholder="Paste the target job description here..."
+                  placeholder="Paste the job description here..."
                   className="min-h-[200px] bg-background border-white/10"
                   value={jobDescription}
                   onChange={(e) => setJobDescription(e.target.value)}
@@ -83,23 +83,23 @@ export function AiTailor() {
                 disabled={isLoading}
               >
                 {isLoading ? <Loader2 className="w-4 h-4 mr-2 animate-spin" /> : <Sparkles className="w-4 h-4 mr-2" />}
-                Refine Personal Statement
+                Optimize for Role
               </Button>
             </div>
 
             <div className="space-y-6">
-              <Card className="glass-panel h-full border-none min-h-[300px] flex flex-col">
-                <CardHeader>
-                  <CardTitle className="text-sm font-medium flex items-center justify-between">
-                    Refined Result
+              <ShadCard className="glass-panel h-full border-none min-h-[300px] flex flex-col">
+                <ShadHeader>
+                  <ShadTitle className="text-sm font-medium flex items-center justify-between">
+                    Tailored Statement
                     {refinedStatement && (
                       <Button variant="ghost" size="sm" onClick={copyToClipboard} className="h-8 px-2 text-accent">
                         {isCopied ? <CheckCircle2 className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                       </Button>
                     )}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="flex-1">
+                  </ShadTitle>
+                </ShadHeader>
+                <ShadContent className="flex-1">
                   {refinedStatement ? (
                     <p className="text-foreground leading-relaxed animate-in fade-in duration-500">
                       {refinedStatement}
@@ -107,11 +107,11 @@ export function AiTailor() {
                   ) : (
                     <div className="h-full flex flex-col items-center justify-center text-muted-foreground italic text-center px-8">
                       <Sparkles className="w-12 h-12 mb-4 opacity-20" />
-                      Your refined statement will appear here after processing.
+                      Your tailored profile statement will appear here.
                     </div>
                   )}
-                </CardContent>
-              </Card>
+                </ShadContent>
+              </ShadCard>
             </div>
           </div>
         </div>

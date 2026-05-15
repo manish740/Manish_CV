@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -7,24 +6,24 @@ import { Badge } from "@/components/ui/badge";
 const projects = [
   {
     id: "project-migration",
-    title: "Enterprise Fleet Migration",
-    challenge: "Upgrading 250+ end-of-life laptops to Windows 11 under tight 2-week deadline.",
-    resolution: "Engineered automated SCCM deployment task sequence reducing setup time per unit by 60%.",
-    tag: "Hardware Deployment"
+    title: "IT System Installation",
+    challenge: "Standardizing software and hardware setup for a high-volume client environment.",
+    resolution: "Implemented systematic OS installation and configuration protocols for enhanced performance.",
+    tag: "Software"
   },
   {
     id: "project-server",
-    title: "Server Room Infrastructure",
-    challenge: "Complete overhaul of messy cabling and outdated patch panels causing intermittent outages.",
-    resolution: "Redesigned cable management and documented 120+ ports, achieving 0 network downtime since.",
-    tag: "Networking"
+    title: "Hardware Maintenance",
+    challenge: "Frequent system downtime due to unoptimized components and hardware malfunctions.",
+    resolution: "Performed preventive maintenance and component upgrades, reducing future issues by 40%.",
+    tag: "Hardware"
   },
   {
     id: "project-workspace",
-    title: "VIP Executive Support",
-    challenge: "Implementing high-security zero-trust workstations for the executive leadership team.",
-    resolution: "Customized secure hardware configurations with biometric auth and encrypted peripherals.",
-    tag: "High Impact"
+    title: "MFA Security Rollout",
+    challenge: "User friction and security gaps during transitions to multi-factor authentication.",
+    resolution: "Provided comprehensive training and troubleshooting, ensuring 100% adoption and robust security.",
+    tag: "Security"
   }
 ];
 
@@ -33,8 +32,8 @@ export function ProblemSolvingGallery() {
     <section className="py-24">
       <div className="container px-4 mx-auto">
         <div className="mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Problem-Solving Gallery</h2>
-          <p className="text-muted-foreground">High-impact resolutions documented from professional tenure.</p>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">Project Gallery</h2>
+          <p className="text-muted-foreground">Documented technical projects and hardware/software resolutions.</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -60,7 +59,7 @@ export function ProblemSolvingGallery() {
                 </div>
                 <CardContent className="p-6 space-y-4">
                   <div>
-                    <h4 className="text-xs uppercase tracking-widest text-primary font-bold mb-1">Challenge</h4>
+                    <h4 className="text-xs uppercase tracking-widest text-primary font-bold mb-1">Scope</h4>
                     <p className="text-sm text-muted-foreground">{p.challenge}</p>
                   </div>
                   <div>

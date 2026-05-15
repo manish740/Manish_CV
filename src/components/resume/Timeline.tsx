@@ -1,20 +1,29 @@
-
 import { Badge } from "@/components/ui/badge";
 
 const experience = [
   {
-    title: "Senior Desktop Support Engineer",
-    company: "NexGen Solutions",
-    period: "2023 - Present",
-    description: "Lead technician for a 500-user enterprise environment. Spearheaded the migration to Windows 11 for all corporate fleets.",
-    highlights: ["Managed $200k+ hardware budget", "Reduced ticket resolution time by 30%", "Implemented automated imaging via SCCM"]
+    title: "Junior Engineer (Client: Maruti Suzuki)",
+    company: "Williams Consulting Pvt. Ltd.",
+    period: "2022 - Present",
+    description: "Investigate, troubleshoot and resolve daily issues related to workstations, operating systems and applications. Best performer award recipient.",
+    highlights: [
+      "Resolved daily workstation issues",
+      "Managed hardware/software setup",
+      "Maintained Active Directory/OUs",
+      "Configured VPN connectivity"
+    ]
   },
   {
-    title: "IT Support Technician",
-    company: "CloudBound Systems",
-    period: "2021 - 2023",
-    description: "Provided Tier 1 & 2 support for hybrid workforce. Specialized in remote troubleshooting and hardware diagnostics.",
-    highlights: ["Supported 200+ remote users", "Maintained 98% CSAT score", "Standardized onboarding documentation"]
+    title: "Junior Engineer (Client: Hughes Systique)",
+    company: "Williams Consulting Pvt. Ltd.",
+    period: "Feb 2024 - Apr 2024",
+    description: "Focused on desktop configuration and user training for MFA security implementations.",
+    highlights: [
+      "Supported MFA setup & training",
+      "Diagnosed hardware malfunctions",
+      "Performed system compatibility checks",
+      "Optimized performance levels"
+    ]
   }
 ];
 
@@ -26,7 +35,7 @@ export function Timeline() {
           <div>
             <h2 className="text-4xl font-bold sticky top-24">Career <br /><span className="text-primary">Trajectory</span></h2>
             <p className="text-muted-foreground mt-4 pr-8">
-              A vertical journey of technical growth and operational excellence.
+              A journey of technical growth and operational excellence in Gurugram's top IT sectors.
             </p>
           </div>
           
