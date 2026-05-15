@@ -40,9 +40,11 @@ export function Hero() {
           </p>
 
           <div className="flex flex-wrap justify-center gap-6 mb-16">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 rounded-full px-10 h-14 text-lg shadow-lg hover:shadow-primary/20 transition-all hover:-translate-y-1 active:translate-y-0 group">
-              <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" /> Download CV
-            </Button>
+            <a href="/resume.pdf" download="Manish_Rohilla_Resume.pdf">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 rounded-full px-10 h-14 text-lg shadow-lg hover:shadow-primary/20 transition-all hover:-translate-y-1 active:translate-y-0 group">
+                <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" /> Download CV
+              </Button>
+            </a>
             <div className="flex gap-3">
               {[
                 { icon: <Github className="w-6 h-6" />, label: "GitHub", href: "https://github.com" },

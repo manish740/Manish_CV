@@ -49,13 +49,15 @@ export function Navbar() {
           </div>
 
           <div className="flex items-center gap-4">
-            <Button 
-              variant="outline" 
-              size="sm" 
-              className="hidden sm:flex border-primary/20 hover:bg-primary/10 rounded-full transition-all duration-300 hover:scale-105 hover:border-primary/50 active:scale-95"
-            >
-              <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" /> Resume
-            </Button>
+            <a href="/resume.pdf" download="Manish_Rohilla_Resume.pdf">
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="hidden sm:flex border-primary/20 hover:bg-primary/10 rounded-full transition-all duration-300 hover:scale-105 hover:border-primary/50 active:scale-95"
+              >
+                <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" /> Resume
+              </Button>
+            </a>
             <a href="#contact" className="group">
               <Button 
                 size="sm" 
