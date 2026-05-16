@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, ArrowDown, Download } from "lucide-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { Magnetic } from "@/components/ui/magnetic";
 
 export function Hero() {
   const [text, setText] = useState("");
@@ -62,27 +63,31 @@ export function Hero() {
           </p>
 
           <div className="flex flex-wrap justify-center gap-6 mb-16">
-            <a href="/resume.pdf" download="Manish_Rohilla_Resume.pdf">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 rounded-full px-10 h-14 text-lg shadow-lg hover:shadow-primary/20 transition-all hover:-translate-y-1 active:translate-y-0 group">
-                <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" /> Download CV
-              </Button>
-            </a>
+            <Magnetic strength={0.2}>
+              <a href="/resume.pdf" download="Manish_Rohilla_Resume.pdf">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 rounded-full px-10 h-14 text-lg shadow-lg hover:shadow-primary/40 transition-all active:scale-95 group">
+                  <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" /> Download CV
+                </Button>
+              </a>
+            </Magnetic>
             <div className="flex gap-3">
               {[
                 { icon: <Github className="w-6 h-6" />, label: "GitHub", href: "https://github.com" },
                 { icon: <Linkedin className="w-6 h-6" />, label: "LinkedIn", href: "https://linkedin.com" },
                 { icon: <Mail className="w-6 h-6" />, label: "Mail", href: "mailto:mrohilla600@gmail.com" }
               ].map((social, i) => (
-                <a key={i} href={social.href} target="_blank" rel="noopener noreferrer">
-                  <Button 
-                    variant="outline" 
-                    size="icon" 
-                    className="w-14 h-14 rounded-full border-white/10 hover:bg-white/5 hover:border-primary/50 transition-all hover:-translate-y-1 active:translate-y-0"
-                  >
-                    {social.icon}
-                    <span className="sr-only">{social.label}</span>
-                  </Button>
-                </a>
+                <Magnetic key={i} strength={0.4}>
+                  <a href={social.href} target="_blank" rel="noopener noreferrer">
+                    <Button 
+                      variant="outline" 
+                      size="icon" 
+                      className="w-14 h-14 rounded-full border-white/10 hover:bg-white/5 hover:border-primary/50 transition-all active:scale-95"
+                    >
+                      {social.icon}
+                      <span className="sr-only">{social.label}</span>
+                    </Button>
+                  </a>
+                </Magnetic>
               ))}
             </div>
           </div>

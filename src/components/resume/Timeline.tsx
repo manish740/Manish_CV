@@ -1,3 +1,4 @@
+
 import { Badge } from "@/components/ui/badge";
 import { Briefcase, Calendar } from "lucide-react";
 
@@ -53,17 +54,17 @@ export function Timeline() {
           {experience.map((job, idx) => (
             <div key={idx} className="relative group">
               {/* Timeline Indicator */}
-              <div className="absolute -left-[45px] top-0 w-8 h-8 rounded-full glass flex items-center justify-center text-primary group-hover:scale-125 transition-transform duration-500 ring-4 ring-background">
+              <div className="absolute -left-[45px] top-0 w-8 h-8 rounded-full glass flex items-center justify-center text-primary group-hover:scale-125 group-hover:bg-primary group-hover:text-white transition-all duration-500 ring-4 ring-background">
                 <Briefcase className="w-4 h-4" />
               </div>
 
-              <div className="glass-card p-10 rounded-2xl relative">
+              <div className="glass-card p-10 rounded-2xl relative group-hover:scale-[1.01] transition-all duration-500">
                 <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
                   <div>
                     <h3 className="text-2xl font-bold mb-1 text-primary group-hover:text-accent transition-colors">{job.title}</h3>
                     <p className="text-lg font-medium text-foreground/80">{job.company}</p>
                   </div>
-                  <Badge variant="outline" className="flex items-center gap-2 border-primary/20 bg-primary/5 text-primary px-4 py-1.5 rounded-full">
+                  <Badge variant="outline" className="flex items-center gap-2 border-primary/20 bg-primary/5 text-primary px-4 py-1.5 rounded-full group-hover:border-accent/50 group-hover:text-accent transition-colors">
                     <Calendar className="w-3.5 h-3.5" /> {job.period}
                   </Badge>
                 </div>
@@ -73,7 +74,7 @@ export function Timeline() {
                 <ul className="grid sm:grid-cols-2 gap-4">
                   {job.highlights.map((h, i) => (
                     <li key={i} className="flex items-start gap-3 text-sm text-foreground/70">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0 group-hover:bg-accent transition-colors" />
                       {h}
                     </li>
                   ))}

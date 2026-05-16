@@ -1,3 +1,4 @@
+
 import { Badge } from "@/components/ui/badge";
 import { User, Rocket, Shield } from "lucide-react";
 
@@ -8,7 +9,7 @@ export function AboutMe() {
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           <div className="relative group">
             <div className="absolute -inset-4 bg-gradient-to-r from-primary to-accent rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
-            <div className="relative glass p-10 rounded-2xl">
+            <div className="relative glass p-10 rounded-2xl glow-border">
               <h2 className="text-4xl font-bold mb-8">Professional <span className="text-primary">Summary</span></h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                 Experienced System Engineer with over 3.5 years in systems administration, infrastructure maintenance, and technical support. Currently a System Engineer at Lixil India, with a proven track record of optimizing IT environments. Expertise includes comprehensive management of Windows OS, Office 365, VPN, Citrix Workspace, and Active Directory.
@@ -43,14 +44,14 @@ export function AboutMe() {
               </h3>
               <div className="flex flex-wrap gap-2">
                 {["System Administration", "Infrastructure Maintenance", "MFA Security Rollout", "SAP Support", "Citrix Workspace", "Active Directory"].map(tag => (
-                  <Badge key={tag} variant="secondary" className="rounded-full px-4 py-1.5 bg-white/5 border border-white/10 hover:border-primary/50 transition-colors">
+                  <Badge key={tag} variant="secondary" className="rounded-full px-4 py-1.5 bg-white/5 border border-white/10 hover:border-primary/50 hover:bg-primary/10 transition-colors cursor-default">
                     {tag}
                   </Badge>
                 ))}
               </div>
             </div>
             
-            <div className="glass p-8 rounded-2xl border-l-4 border-l-primary">
+            <div className="glass p-8 rounded-2xl border-l-4 border-l-primary hover:border-l-accent transition-colors duration-500">
               <p className="italic text-lg text-foreground/90 leading-relaxed">
                 "Successfully implemented critical security enhancements and provided proficient SAP support, ensuring robust and efficient system operations."
               </p>
