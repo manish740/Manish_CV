@@ -52,7 +52,7 @@ export function Hero() {
             </Magnetic>
             <div className="flex gap-3">
               {[
-                { icon: <Github className="w-6 h-6" />, label: "GitHub", href: "https://github.com" },
+                { icon: <Github className="w-6 h-6" />, label: "GitHub", href: "https://github.com/manish740" },
                 { icon: <Linkedin className="w-6 h-6" />, label: "LinkedIn", href: "https://linkedin.com" },
                 { icon: <Mail className="w-6 h-6" />, label: "Mail", href: "mailto:mrohilla600@gmail.com" }
               ].map((social, i) => (
