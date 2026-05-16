@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -35,15 +34,15 @@ export function LeadCapture() {
                   <p className="text-foreground group-hover:text-primary transition-colors">mrohilla600@gmail.com</p>
                 </div>
               </a>
-              <div className="flex items-center gap-4 group">
+              <a href="tel:+918396845752" className="flex items-center gap-4 group w-fit">
                 <div className="p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground uppercase tracking-widest font-bold">Phone</p>
-                  <p className="text-foreground">+91 8396845752</p>
+                  <p className="text-foreground group-hover:text-primary transition-colors">+91 8396845752</p>
                 </div>
-              </div>
+              </a>
               <div className="flex items-center gap-4 group">
                 <div className="p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
                   <MapPin className="w-5 h-5" />
