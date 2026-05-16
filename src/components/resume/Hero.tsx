@@ -2,18 +2,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, ArrowDown, Download } from "lucide-react";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Magnetic } from "@/components/ui/magnetic";
 
 export function Hero() {
   const [text, setText] = useState("");
   const fullText = "System Engineer";
   const [typingSpeed] = useState(100);
-
-  const profileImg = PlaceHolderImages.find(img => img.id === "profile-photo");
 
   useEffect(() => {
     if (text.length < fullText.length) {
@@ -29,26 +25,6 @@ export function Hero() {
       <div className="container px-6 mx-auto relative z-10 text-center">
         <div className="animate-fade-in-up flex flex-col items-center">
           
-          {/* Profile Photo Area */}
-          <div className="relative mb-10 group">
-            {/* Multi-layered glow effect */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-primary via-accent to-primary rounded-full blur-md opacity-40 group-hover:opacity-80 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
-            <div className="absolute -inset-4 bg-primary/20 rounded-full blur-2xl opacity-20 pointer-events-none"></div>
-            
-            <div className="relative w-44 h-44 md:w-52 md:h-52 rounded-full border-[6px] border-background overflow-hidden glass shadow-2xl animate-float">
-              {profileImg && (
-                <Image
-                  src={profileImg.imageUrl}
-                  alt="Manish Rohilla Profile"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale-[0.2] hover:grayscale-0"
-                  data-ai-hint={profileImg.imageHint}
-                  priority
-                />
-              )}
-            </div>
-          </div>
-
           <h1 className="text-6xl md:text-8xl font-bold mb-8 tracking-tighter relative inline-block">
             Manish <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Rohilla</span>
             <span className="absolute -bottom-2 left-0 w-full h-1.5 bg-gradient-to-r from-primary/50 to-transparent rounded-full blur-sm" />
