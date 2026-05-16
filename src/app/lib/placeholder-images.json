@@ -9,9 +9,9 @@
     },
     {
       "id": "profile-photo",
-      "description": "Professional headshot of a system engineer",
-      "imageUrl": "https://picsum.photos/seed/man-tech/400/400",
-      "imageHint": "professional man"
+      "description": "Professional headshot of Manish Rohilla in a suit",
+      "imageUrl": "https://picsum.photos/seed/man-suit-glasses/400/400",
+      "imageHint": "professional man suit"
     },
     {
       "id": "project-migration",

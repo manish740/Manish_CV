@@ -31,15 +31,19 @@ export function Hero() {
           
           {/* Profile Photo Area */}
           <div className="relative mb-10 group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-full blur opacity-40 group-hover:opacity-75 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
-            <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-background overflow-hidden glass shadow-2xl animate-float">
+            {/* Multi-layered glow effect */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-primary via-accent to-primary rounded-full blur-md opacity-40 group-hover:opacity-80 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
+            <div className="absolute -inset-4 bg-primary/20 rounded-full blur-2xl opacity-20 pointer-events-none"></div>
+            
+            <div className="relative w-44 h-44 md:w-52 md:h-52 rounded-full border-[6px] border-background overflow-hidden glass shadow-2xl animate-float">
               {profileImg && (
                 <Image
                   src={profileImg.imageUrl}
                   alt="Manish Rohilla Profile"
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale-[0.2] hover:grayscale-0"
                   data-ai-hint={profileImg.imageHint}
+                  priority
                 />
               )}
             </div>
@@ -57,7 +61,7 @@ export function Hero() {
             </p>
           </div>
           
-          <p className="max-w-2xl mx-auto text-lg text-muted-foreground mb-12 leading-relaxed">
+          <p className="max-w-2xl mx-auto text-lg text-muted-foreground mb-12 leading-relaxed font-body">
             Specializing in enterprise IT infrastructure, device management (Intune), and complex system optimization. 
             Transforming technical challenges into high-performance IT environments.
           </p>
@@ -65,7 +69,7 @@ export function Hero() {
           <div className="flex flex-wrap justify-center gap-6 mb-16">
             <Magnetic strength={0.2}>
               <a href="/resume.pdf" download="Manish_Rohilla_Resume.pdf">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 rounded-full px-10 h-14 text-lg shadow-lg hover:shadow-primary/40 transition-all active:scale-95 group">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 rounded-full px-10 h-14 text-lg shadow-lg hover:shadow-primary/40 transition-all active:scale-95 group border-none">
                   <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" /> Download CV
                 </Button>
               </a>
@@ -81,7 +85,7 @@ export function Hero() {
                     <Button 
                       variant="outline" 
                       size="icon" 
-                      className="w-14 h-14 rounded-full border-white/10 hover:bg-white/5 hover:border-primary/50 transition-all active:scale-95"
+                      className="w-14 h-14 rounded-full border-white/10 glass hover:bg-white/10 hover:border-primary/50 transition-all active:scale-95"
                     >
                       {social.icon}
                       <span className="sr-only">{social.label}</span>
