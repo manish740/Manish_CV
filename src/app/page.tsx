@@ -3,6 +3,7 @@ import { Hero } from "@/components/resume/Hero";
 import { AboutMe } from "@/components/resume/AboutMe";
 import { SkillsMatrix } from "@/components/resume/SkillsMatrix";
 import { Timeline } from "@/components/resume/Timeline";
+import { Education } from "@/components/resume/Education";
 import { Certifications } from "@/components/resume/Certifications";
 import { ProblemSolvingGallery } from "@/components/resume/ProblemSolvingGallery";
 import { LeadCapture } from "@/components/resume/LeadCapture";
@@ -23,6 +24,10 @@ export default function Home() {
       
       <div id="experience">
         <Timeline />
+      </div>
+
+      <div id="education">
+        <Education />
       </div>
       
       <Certifications />
@@ -47,6 +52,7 @@ export default function Home() {
             <a href="#about" className="hover:text-primary transition-colors">About</a>
             <a href="#skills" className="hover:text-primary transition-colors">Skills</a>
             <a href="#experience" className="hover:text-primary transition-colors">Experience</a>
+            <a href="#education" className="hover:text-primary transition-colors">Education</a>
             <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
           </div>
           <p className="text-xs text-muted-foreground/50">
