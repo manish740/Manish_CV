@@ -4,7 +4,6 @@ import { AboutMe } from "@/components/resume/AboutMe";
 import { SkillsMatrix } from "@/components/resume/SkillsMatrix";
 import { Timeline } from "@/components/resume/Timeline";
 import { Certifications } from "@/components/resume/Certifications";
-import { AiTailor } from "@/components/resume/AiTailor";
 import { ProblemSolvingGallery } from "@/components/resume/ProblemSolvingGallery";
 import { LeadCapture } from "@/components/resume/LeadCapture";
 import { Toaster } from "@/components/ui/toaster";
@@ -27,8 +26,6 @@ export default function Home() {
       </div>
       
       <Certifications />
-      
-      <AiTailor />
       
       <div id="projects">
         <ProblemSolvingGallery />
@@ -60,7 +57,7 @@ export default function Home() {
 
       <Toaster />
       
-      {/* Floating Back to Top (Simple Implementation) */}
+      {/* Floating Back to Top */}
       <a href="#" className="fixed bottom-8 right-8 z-[60] w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all hover:-translate-y-2 group">
         <span className="sr-only">Back to top</span>
         <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 transition-transform group-hover:-translate-y-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m18 15-6-6-6 6"/></svg>
